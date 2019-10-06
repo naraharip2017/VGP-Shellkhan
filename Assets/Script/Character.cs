@@ -26,18 +26,22 @@ public class Character : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.position += new Vector3(0, walkSpeed, 0);
+            target = transform.position;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.position += new Vector3(0, -walkSpeed, 0);
+            target = transform.position;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position += new Vector3(-walkSpeed, 0, 0);
+            target = transform.position;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position += new Vector3(walkSpeed, 0, 0);
+            target = transform.position;
         }
         else
         {
