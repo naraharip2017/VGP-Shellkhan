@@ -11,6 +11,9 @@ public class Character : MonoBehaviour
     private bool move;
     public GameObject point;
 
+    
+    public GameObject backpack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +67,25 @@ public class Character : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Stops moving the player once it cloides with something
+        move = false;
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        // Stops moving the player once it cloides with something
+        move = false;
+
+
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        // Stops moving the player once it cloides with something
+        move = false; 
     }
 
 
