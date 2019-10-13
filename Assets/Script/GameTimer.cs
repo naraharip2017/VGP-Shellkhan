@@ -9,7 +9,7 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private float timerInterval;
 
     private float timer;
-    private bool canCount = false;
+    private bool canCount = true;
     private bool doOnce = false;
 
     private void Start()
@@ -18,17 +18,29 @@ public class GameTimer : MonoBehaviour
     }
     private void Update()
     {
-        if(timer>=0f && canCount)
+        if(timer>=0.0f && canCount)
         {
             timer -= Time.deltaTime;
             uitext.text = timer.ToString("F");
         }
-        else if (timer <=0f && !doOnce)
+        else if (timer <=0.0f && !doOnce)
         {
             canCount = false;
             doOnce = true;
             uitext.text = "0.00";
             timer = 0.0f;
+            GameOver();
         }
+    }
+    public void ResetBin()
+    {
+        timer = timerInterval;
+        canCount = true;
+        doOnce = false;
+
+    }
+    void GameOver()
+    {
+
     }
 }
