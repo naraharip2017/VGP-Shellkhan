@@ -26,47 +26,51 @@ public class Character : MonoBehaviour
     void Update()
     {
         //controlling character movement via arrow keys
-        if (Input.GetKey(KeyCode.UpArrow))
+        if(GameTimer.round)
         {
-            transform.position += new Vector3(0, walkSpeed, 0);
-            target = transform.position;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.position += new Vector3(0, -walkSpeed, 0);
-            target = transform.position;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.position += new Vector3(-walkSpeed, 0, 0);
-            target = transform.position;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.position += new Vector3(walkSpeed, 0, 0);
-            target = transform.position;
-        }
-        else
-        {
-            //controlling character movement via the mouse
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKey(KeyCode.UpArrow))
             {
-                target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                target.z = transform.position.z;
-                if (move == false)
+                transform.position += new Vector3(0, walkSpeed, 0);
+                target = transform.position;
+            }
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.position += new Vector3(0, -walkSpeed, 0);
+                target = transform.position;
+            }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.position += new Vector3(-walkSpeed, 0, 0);
+                target = transform.position;
+            }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.position += new Vector3(walkSpeed, 0, 0);
+                target = transform.position;
+            }
+            else
+            {
+                //controlling character movement via the mouse
+                if (Input.GetMouseButtonDown(0))
                 {
-                    move = true;
-                    Instantiate(point, target, Quaternion.identity);
+                    target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    target.z = transform.position.z;
+                    if (move == false)
+                    {
+                        move = true;
+                        Instantiate(point, target, Quaternion.identity);
+                    }
+                }
+                if (!Input.GetKeyDown(KeyCode.UpArrow) && !Input.GetKeyDown(KeyCode.DownArrow) && !Input.GetKeyDown(KeyCode.LeftArrow) && !Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    if (move == true)
+                    {
+                        transform.position = Vector3.MoveTowards(transform.position, target, walkSpeed * 10 * Time.deltaTime);
+                    }
                 }
             }
-            if (!Input.GetKeyDown(KeyCode.UpArrow) && !Input.GetKeyDown(KeyCode.DownArrow) && !Input.GetKeyDown(KeyCode.LeftArrow) && !Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                if (move == true)
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, target, walkSpeed * 10 * Time.deltaTime);
-                }
-            }
         }
+       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
