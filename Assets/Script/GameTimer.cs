@@ -19,7 +19,7 @@ public class GameTimer : MonoBehaviour
     }
     private void Update()
     {
-        if(timer>=0f && canCount)
+        if(timer>=0.0f && canCount)
         {
             timer -= Time.deltaTime;
             uitext.text = timer.ToString("F");
@@ -31,8 +31,12 @@ public class GameTimer : MonoBehaviour
             doOnce = true;
             uitext.text = "0.00";
             timer = 0.0f;
+<<<<<<< HEAD
             round = false;
             //endRound();
+=======
+            GameOver();
+>>>>>>> 6ce3ea90c8090ca8fb144d507e631417cc1f47b6
         }
 
     }
@@ -44,6 +48,7 @@ public class GameTimer : MonoBehaviour
         canCount = true;
         doOnce = false;
     }
+<<<<<<< HEAD
 
     //todo: tuco/police, end of round menu
 
@@ -52,4 +57,17 @@ public class GameTimer : MonoBehaviour
         //reset to next round
     //}
 
+=======
+    public void ResetBin()
+    {
+        timer = timerInterval;
+        canCount = true;
+        doOnce = false;
+
+    }
+    void GameOver()
+    {
+
+    }
+>>>>>>> 6ce3ea90c8090ca8fb144d507e631417cc1f47b6
 }
