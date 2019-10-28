@@ -76,20 +76,11 @@ public class Character : MonoBehaviour
     {
         // Stops moving the player once it cloides with something
         move = false;
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        // Stops moving the player once it cloides with something
-        move = false;
-
-
+        rigidBody.freezeRotation=true;
+  
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        // Stops moving the player once it cloides with something
-        move = false; 
-    }
+
 
 
 
