@@ -9,7 +9,6 @@ public class Character : MonoBehaviour
 
     private Vector3 target;
     private bool move;
-    public GameObject point;
 
     
     public GameObject backpack;
@@ -57,7 +56,6 @@ public class Character : MonoBehaviour
                     if (move == false)
                     {
                         move = true;
-                        Instantiate(point, target, Quaternion.identity);
                     }
                 }
                 if (!Input.GetKeyDown(KeyCode.UpArrow) && !Input.GetKeyDown(KeyCode.DownArrow) && !Input.GetKeyDown(KeyCode.LeftArrow) && !Input.GetKeyDown(KeyCode.RightArrow))
