@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uitext: {fileID: 2090638383}
-  timerInterval: 5
+  timerInterval: 10
 --- !u!4 &456343291
 Transform:
   m_ObjectHideFlags: 0
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69aa739fbc158c41a1efb32e3b81807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uitext: {fileID: 0}
+  uitext: {fileID: 2090638383}
   timerInterval: 0
 --- !u!223 &733395854
 Canvas:
