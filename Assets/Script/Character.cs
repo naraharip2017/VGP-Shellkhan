@@ -18,7 +18,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-
+       
     }
 
     // Update is called once per frame
