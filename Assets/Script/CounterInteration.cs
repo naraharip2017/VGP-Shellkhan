@@ -8,18 +8,20 @@ public class CounterInteration : MonoBehaviour
     public float minDistance;
     bool pressed;
     public GameObject backpack;
+    public Sprite potSprite;
 
-    public Sprite sprite;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.sprite = this.GetComponent<SpriteRenderer>().sprite;
+        spriteRenderer = this.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (pressed && mainCharacter != null)
         {
             if (Vector3.Distance(mainCharacter.transform.position, transform.position) < minDistance)
@@ -41,8 +43,40 @@ public class CounterInteration : MonoBehaviour
 
     public void beginCooking()
     {
-        BackpackController backpack = mainCharacter.GetComponent<Character>().backpack.GetComponent<BackpackController>();
-        
-        print("item.name: " + backpack.slot1);
+        BackpackController backpackController = backpack.GetComponent<BackpackController>();
+
+        GameItemController slot1Item = backpackController.slot1.GetComponent<SlotController>().gameItem;
+
+        if (slot1Item != null)
+        {
+            print("Item in Slot 1:" + slot1Item.itemName);
+
+        }
+
+        GameItemController slot2Item = backpackController.slot2.GetComponent<SlotController>().gameItem;
+
+        if (slot2Item != null)
+        {
+            print("Item in Slot 2:" + slot2Item.itemName);
+
+        }
+
+
+        GameItemController slot3Item = backpackController.slot3.GetComponent<SlotController>().gameItem;
+
+        if (slot3Item != null)
+        {
+            print("Item in Slot 3:" + slot3Item.itemName);
+
+        }
+
+        spriteRenderer.sprite = potSprite;
+
+
+
+
+
+
+
     }
 }
