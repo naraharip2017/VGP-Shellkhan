@@ -44,9 +44,6 @@ public class BackpackController : MonoBehaviour
             case 2:
                 slot3.GetComponent<SlotController>().PutItemInSlot(gameItem);
                 break;
-
-
-
         }
 
         if (counter >= NUM_SLOTS)
