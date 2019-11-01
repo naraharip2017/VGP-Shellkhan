@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class CounterInteration : MonoBehaviour
 {
@@ -12,10 +14,23 @@ public class CounterInteration : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    [SerializeField] private Text uitext;
+    [SerializeField] private float timerInterval = 5;
+
+
+    private float timer;
+    private bool canCount = true;
+    private bool doOnce = false;
+    public static bool round = true;
+    bool startTimer = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = this.GetComponent<SpriteRenderer>();
+        timer = timerInterval;
+
     }
 
     // Update is called once per frame
@@ -31,8 +46,36 @@ public class CounterInteration : MonoBehaviour
             }
 
         }
+
+        if (startTimer) { 
+        if (timer >= 0.0f && canCount)
+        {
+            timer -= Time.deltaTime;
+            uitext.text = timer.ToString("F");
+            round = true;
+        }
+        else if (timer <= 0.0f && !doOnce)
+        {
+            canCount = false;
+            doOnce = true;
+            uitext.text = "0.00";
+            timer = 0.0f;
+            round = false;
+            //endRound();
+        }
     }
-    
+
+    }
+
+    //implement next round
+    public void ResetBtn()
+    {
+        timer = timerInterval;
+        canCount = true;
+        doOnce = false;
+    }
+
+
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
@@ -43,6 +86,8 @@ public class CounterInteration : MonoBehaviour
 
     public void beginCooking()
     {
+
+
         BackpackController backpackController = backpack.GetComponent<BackpackController>();
 
         GameItemController slot1Item = backpackController.slot1.GetComponent<SlotController>().gameItem;
@@ -72,8 +117,16 @@ public class CounterInteration : MonoBehaviour
 
         spriteRenderer.sprite = potSprite;
 
+        
+
+        for (int i = 0; i < GameController.instance.recipes.Length; ++i)
+        {
+            print(GameController.instance.recipes[i].GetComponent<GameItemController>().itemName.ToString());
 
 
+        }
+
+        startTimer = true;
 
 
 
