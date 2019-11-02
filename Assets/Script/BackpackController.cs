@@ -43,6 +43,19 @@ public class BackpackController : MonoBehaviour
     }
 
 
+   public void ClearBackpack()
+    {
+        counter = 0;
+
+        for (int i =0; i < items.Length; ++i)
+        {
+            items[i] = null;
+            slots[i].clearItem();
+
+        }
+    }
+
+
 
 
 

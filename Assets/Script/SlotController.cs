@@ -29,7 +29,20 @@ public class SlotController : MonoBehaviour
         {
             spriteRenderer.sprite = gameItem.sprite;
         }
+        else
+        {
+            spriteRenderer.sprite = null;
+        }
         
      
     }
+
+    public void clearItem()
+    {
+        spriteRenderer.sprite = null;
+        gameItem = null;
+
+    }
+
+
 }

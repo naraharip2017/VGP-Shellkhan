@@ -31,6 +31,7 @@ public class CounterInteration : MonoBehaviour
     {
         spriteRenderer = this.GetComponent<SpriteRenderer>();
         timer = timerInterval;
+        uitext.text = "";
 
     }
 
@@ -90,11 +91,52 @@ public class CounterInteration : MonoBehaviour
 
 
         BackpackController backpackController = backpack.GetComponent<BackpackController>();
+        BackpackController recipeController = GameController.instance.recipes.GetComponent<BackpackController>();
+
+        GameItemController[] backPackItems =  backpackController.items;
+        GameItemController[] recipeItems = recipeController.items;
+
+
+        if (recipeItems.Length != backPackItems.Length)
+        {
+            return;
+        }
+
+
+        bool hasItem = false;
+
+
+        for (int i = 0; i < recipeItems.Length; ++i)
+        {
+            if(recipeItems[i] != null && backPackItems[i] != null) {
+                hasItem = true;
+                if(recipeItems[i].itemName != backPackItems[i].itemName)
+                {
+                    print("Comparing " + recipeItems[i].itemName + " and " + backPackItems[i].itemName + " but not equal");
+                    return;
+                }
+            }
+
+            if (hasItem == false)
+            {
+                return;
+            }
+
+        }
+
+
+
 
         spriteRenderer.sprite = potSprite;
-       
+     
 
         startTimer = true;
+
+        backpackController.ClearBackpack();
+        recipeController.ClearBackpack();
+
+        GameController.instance.createNewRecipe(2);
+
 
 
 

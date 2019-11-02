@@ -8,8 +8,8 @@ public class GameController : MonoBehaviour
 
     public static GameController instance;
     public GameObject[] ingredients;
-    public GameObject[] recipes;
-    public GameObject recipeObject;
+    public GameObject recipes;
+    public bool recipeCreated = false;
 
     private void Awake()
     {
@@ -19,20 +19,26 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        createNewRecipe(2);
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!recipeCreated)
+        {
+            createNewRecipe(2);
+            recipeCreated = true;
+        }
+
+
     }
 
 
 
     public void createNewRecipe(int numItems)
     {
-        recipes = new GameObject[numItems];
         bool[] doseExist = new bool[ingredients.Length];
 
         System.Random rnd = new System.Random();
@@ -49,12 +55,14 @@ public class GameController : MonoBehaviour
             }
 
             GameObject tmpObject = ingredients[index];
-            recipes[i] = tmpObject;
+            recipes.GetComponent<BackpackController>().AddItemToBackpack(tmpObject.GetComponent<GameItemController>());
             doseExist[index] = true;
 
 
 
         }
+
+
 
 
     }
