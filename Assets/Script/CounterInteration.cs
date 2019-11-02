@@ -29,7 +29,7 @@ public class CounterInteration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = this.GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentsInChildren<SpriteRenderer>()[1];
         timer = timerInterval;
         uitext.text = "";
 
