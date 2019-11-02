@@ -61,7 +61,6 @@ public class CounterInteration : MonoBehaviour
             uitext.text = "0.00";
             timer = 0.0f;
             round = false;
-            //endRound();
         }
     }
 
@@ -90,41 +89,8 @@ public class CounterInteration : MonoBehaviour
 
         BackpackController backpackController = backpack.GetComponent<BackpackController>();
 
-        GameItemController slot1Item = backpackController.slot1.GetComponent<SlotController>().gameItem;
-
-        if (slot1Item != null)
-        {
-            print("Item in Slot 1:" + slot1Item.itemName);
-
-        }
-
-        GameItemController slot2Item = backpackController.slot2.GetComponent<SlotController>().gameItem;
-
-        if (slot2Item != null)
-        {
-            print("Item in Slot 2:" + slot2Item.itemName);
-
-        }
-
-
-        GameItemController slot3Item = backpackController.slot3.GetComponent<SlotController>().gameItem;
-
-        if (slot3Item != null)
-        {
-            print("Item in Slot 3:" + slot3Item.itemName);
-
-        }
-
         spriteRenderer.sprite = potSprite;
-
-        
-
-        for (int i = 0; i < GameController.instance.recipes.Length; ++i)
-        {
-            print(GameController.instance.recipes[i].GetComponent<GameItemController>().itemName.ToString());
-
-
-        }
+       
 
         startTimer = true;
 
