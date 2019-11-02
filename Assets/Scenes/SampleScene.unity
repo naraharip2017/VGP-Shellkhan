@@ -1910,10 +1910,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4144379d8f5844cbea2b2eeae6ee5501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: [{fileID: 0}, {fileID: 0}, {fileID: 0}, {fileID: 0}, {fileID: 0}, {fileID: 0},
-    {fileID: 0}, {fileID: 0}]
-  slots: [{fileID: 947166927}, {fileID: 1174962761}, {fileID: 1062272056}, {fileID: 2063541528},
-    {fileID: 793074149}, {fileID: 1152376692}, {fileID: 1924657893}, {fileID: 1176070632}]
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slots:
+  - {fileID: 947166927}
+  - {fileID: 1174962761}
+  - {fileID: 1062272056}
+  - {fileID: 2063541528}
+  - {fileID: 793074149}
+  - {fileID: 1152376692}
+  - {fileID: 1924657893}
+  - {fileID: 1176070632}
 --- !u!4 &584175123
 Transform:
   m_ObjectHideFlags: 0
