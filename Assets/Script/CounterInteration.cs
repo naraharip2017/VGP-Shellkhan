@@ -11,6 +11,7 @@ public class CounterInteration : MonoBehaviour
     bool pressed;
     public GameObject backpack;
     public Sprite potSprite;
+    public Sprite finishedCooking;
 
     public SpriteRenderer spriteRenderer;
 
@@ -61,7 +62,8 @@ public class CounterInteration : MonoBehaviour
             uitext.text = "0.00";
             timer = 0.0f;
             round = false;
-        }
+            spriteRenderer.sprite = finishedCooking;
+            }
     }
 
     }
