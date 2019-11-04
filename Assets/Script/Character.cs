@@ -5,10 +5,9 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     Rigidbody2D rigidBody;
-    public float walkSpeed = 0.2f;
+    public float walkSpeed;
 
     private Vector3 target;
-    private bool move;
 
     
     public GameObject backpack;
@@ -26,45 +25,25 @@ public class Character : MonoBehaviour
         //controlling character movement via arrow keys
         if(GameTimer.round)
         {
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W))
             {
                 transform.position += new Vector3(0, walkSpeed, 0);
                 target = transform.position;
             }
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.S))
             {
                 transform.position += new Vector3(0, -walkSpeed, 0);
                 target = transform.position;
             }
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.A))
             {
                 transform.position += new Vector3(-walkSpeed, 0, 0);
                 target = transform.position;
             }
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.D))
             {
                 transform.position += new Vector3(walkSpeed, 0, 0);
                 target = transform.position;
-            }
-            else
-            {
-                //controlling character movement via the mouse
-                if (Input.GetMouseButtonDown(0))
-                {
-                    target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    target.z = transform.position.z;
-                    if (move == false)
-                    {
-                        move = true;
-                    }
-                }
-                if (!Input.GetKeyDown(KeyCode.UpArrow) && !Input.GetKeyDown(KeyCode.DownArrow) && !Input.GetKeyDown(KeyCode.LeftArrow) && !Input.GetKeyDown(KeyCode.RightArrow))
-                {
-                    if (move == true)
-                    {
-                        transform.position = Vector3.MoveTowards(transform.position, target, walkSpeed * 10 * Time.deltaTime);
-                    }
-                }
             }
         }
        
@@ -73,7 +52,6 @@ public class Character : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Stops moving the player once it cloides with something
-        move = false;
         rigidBody.freezeRotation=true;
   
     }
