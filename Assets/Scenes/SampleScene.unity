@@ -2048,7 +2048,7 @@ GameObject:
   - component: {fileID: 521121748}
   - component: {fileID: 521121747}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Next Round
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2527,7 +2527,7 @@ PrefabInstance:
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: timerInterval
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -2535,6 +2535,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d143771099eaf4c6596c7f5a299672d4,
         type: 3}
+    - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: scoreUI
+      value: 
+      objectReference: {fileID: 2006054311}
+    - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: score
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4292877415774672120, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: m_Size.x
@@ -2559,6 +2569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.1172414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292877415774672120, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3484651542823341386, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -2748,7 +2763,7 @@ PrefabInstance:
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: timerInterval
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -2756,6 +2771,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d143771099eaf4c6596c7f5a299672d4,
         type: 3}
+    - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: scoreUI
+      value: 
+      objectReference: {fileID: 2006054311}
+    - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: score
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4292877415774672120, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: m_Size.x
@@ -2780,6 +2805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.1172414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292877415774672120, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3484651542823341386, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -2981,6 +3011,7 @@ RectTransform:
   m_Children:
   - {fileID: 2090638385}
   - {fileID: 521121746}
+  - {fileID: 2006054310}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -3530,7 +3561,7 @@ PrefabInstance:
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: timerInterval
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -3538,6 +3569,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d143771099eaf4c6596c7f5a299672d4,
         type: 3}
+    - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: scoreUI
+      value: 
+      objectReference: {fileID: 2006054311}
+    - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: score
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4292877415774672120, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: m_Size.x
@@ -3562,6 +3603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.1172414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292877415774672120, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3484651542823341386, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -5716,6 +5762,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a282bdc334b4eeb9c4112dabb2f9b8, type: 3}
+--- !u!1 &2006054309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2006054310}
+  - component: {fileID: 2006054312}
+  - component: {fileID: 2006054311}
+  m_Layer: 5
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2006054310
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006054309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 733395850}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 557, y: 1471}
+  m_SizeDelta: {x: 304.8, y: 157.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2006054311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006054309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 100
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &2006054312
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006054309}
+  m_CullTransparentMesh: 0
 --- !u!1001 &2039614680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5723,16 +5848,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7615834030885170607, guid: b483002ca43914befaadea13ed82bf17,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7615834030885170607, guid: b483002ca43914befaadea13ed82bf17,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8368919166950344820, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: m_Name
@@ -5822,7 +5937,7 @@ PrefabInstance:
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: timerInterval
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -5830,6 +5945,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d143771099eaf4c6596c7f5a299672d4,
         type: 3}
+    - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: scoreUI
+      value: 
+      objectReference: {fileID: 2006054311}
+    - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: score
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4292877415774672120, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: m_Size.x
@@ -5855,12 +5980,27 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.1172414
       objectReference: {fileID: 0}
+    - target: {fileID: 4292877415774672120, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3484651542823341386, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: fe97f0813bd6849f4b466410f471c890,
         type: 3}
+    - target: {fileID: 7615834030885170607, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615834030885170607, guid: b483002ca43914befaadea13ed82bf17,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b483002ca43914befaadea13ed82bf17, type: 3}
 --- !u!1 &2063541526 stripped
@@ -5901,7 +6041,7 @@ GameObject:
   - component: {fileID: 2090638384}
   - component: {fileID: 2090638383}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Countdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
