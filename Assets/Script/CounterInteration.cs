@@ -14,7 +14,6 @@ public class CounterInteration : MonoBehaviour
     public Sprite potSprite;
     public Sprite finishedCooking;
     public Text scoreUI;
-    public int score;
 
     public SpriteRenderer spriteRenderer;
 
@@ -41,7 +40,7 @@ public class CounterInteration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreUI.text = score.ToString();
+        scoreUI.text = GameController.instance.score.ToString();
         if (pressed && mainCharacter != null)
         {
             if (Vector3.Distance(mainCharacter.transform.position, transform.position) < minDistance)
@@ -76,20 +75,19 @@ public class CounterInteration : MonoBehaviour
                 doneCooking = true;
 
             }
-            if (doneCooking && Vector3.Distance(mainCharacter.transform.position, transform.position) < minDistance && pressed && mainCharacter != null)
-            {
-
-                doneCooking = false;
-                MonoBehaviour.print("should add score");
-                print("before adding" + score.ToString());
-                int newScore = score + 10;
-                this.score = newScore;
-                scoreUI.text = score.ToString();
-                print("after adding" + score.ToString());
-                print("new score" + newScore.ToString());
-                spriteRenderer.sprite = null;
-            }
+            
         }
+
+
+        if (doneCooking && Vector3.Distance(mainCharacter.transform.position, transform.position) < minDistance && pressed && mainCharacter != null)
+        {
+
+            doneCooking = false;
+            GameController.instance.score += 10;
+            spriteRenderer.sprite = null;
+        }
+
+
 
     }
 
