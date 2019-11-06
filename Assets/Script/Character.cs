@@ -23,8 +23,8 @@ public class Character : MonoBehaviour
     void Update()
     {
         //controlling character movement via arrow keys
-        if(GameTimer.round)
-        {
+        //if(GameTimer.round)
+        //{
             if (Input.GetKey(KeyCode.W))
             {
                 transform.position += new Vector3(0, walkSpeed, 0);
@@ -45,7 +45,7 @@ public class Character : MonoBehaviour
                 transform.position += new Vector3(walkSpeed, 0, 0);
                 target = transform.position;
             }
-        }
+        //}
        
     }
 
