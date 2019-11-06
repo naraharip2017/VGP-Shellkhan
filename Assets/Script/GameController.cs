@@ -10,7 +10,6 @@ public class GameController : MonoBehaviour
     public GameObject[] ingredients;
     public GameObject recipes;
     public bool recipeCreated = false;
-    public int score;
 
     private void Awake()
     {
