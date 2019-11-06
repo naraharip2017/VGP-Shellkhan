@@ -5567,7 +5567,6 @@ MonoBehaviour:
   - {fileID: 1317857537}
   recipes: {fileID: 905736477}
   recipeCreated: 0
-  score: 0
 --- !u!1 &1644305035
 GameObject:
   m_ObjectHideFlags: 0
