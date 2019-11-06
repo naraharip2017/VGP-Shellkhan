@@ -40,7 +40,7 @@ public class CounterInteration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreUI.text = "Score: " + GameController.instance.score.ToString();
+        scoreUI.text = GameController.instance.score.ToString();
         if (pressed && mainCharacter != null)
         {
             if (Vector3.Distance(mainCharacter.transform.position, transform.position) < minDistance)
@@ -158,7 +158,7 @@ public class CounterInteration : MonoBehaviour
         backpackController.ClearBackpack();
         recipeController.ClearBackpack();
 
-        GameController.instance.createNewRecipe(4);
+        GameController.instance.createNewRecipe(2);
 
         doneCooking = false;
 
