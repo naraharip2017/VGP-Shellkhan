@@ -40,7 +40,7 @@ public class CounterInteration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreUI.text = GameController.instance.score.ToString();
+        scoreUI.text = "Score: " + GameController.instance.score.ToString();
         if (pressed && mainCharacter != null)
         {
             if (Vector3.Distance(mainCharacter.transform.position, transform.position) < minDistance)

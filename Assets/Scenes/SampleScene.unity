@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Purple Rounded Beaker
   sprite: {fileID: 0}
 --- !u!212 &136355987
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Orange Bottle Beaker
   sprite: {fileID: 0}
 --- !u!212 &240793686
@@ -905,7 +905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Red Flask
   sprite: {fileID: 0}
 --- !u!212 &299508485
@@ -2179,7 +2179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Yellow Rounded Beaker
   sprite: {fileID: 0}
 --- !u!212 &408979257
@@ -2604,7 +2604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Brown Test tube
   sprite: {fileID: 0}
 --- !u!212 &515526848
@@ -3211,7 +3211,7 @@ PrefabInstance:
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: minDistance
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -3447,7 +3447,7 @@ PrefabInstance:
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: minDistance
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -4188,7 +4188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: 'Red Test tube '
   sprite: {fileID: 0}
 --- !u!212 &921231709
@@ -4313,7 +4313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Rounded Yellow Flask
   sprite: {fileID: 0}
 --- !u!212 &925163929
@@ -4438,7 +4438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Purple Rounded Beaker 2
   sprite: {fileID: 0}
 --- !u!212 &929159209
@@ -4692,7 +4692,7 @@ PrefabInstance:
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: minDistance
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
@@ -5029,7 +5029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Purple Test tube
   sprite: {fileID: 0}
 --- !u!212 &1150150778
@@ -5797,7 +5797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: 'Deep Blue Beaker '
   sprite: {fileID: 0}
 --- !u!212 &1317857540
@@ -5936,7 +5936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: 'Red Test tube '
   sprite: {fileID: 0}
 --- !u!212 &1338296744
@@ -6487,7 +6487,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.53333336, y: 0.7558939}
+  m_Size: {x: 0.64, y: 0.96}
   m_EdgeRadius: 0
 --- !u!50 &1646337078
 Rigidbody2D:
@@ -7471,7 +7471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Blue Flask
   sprite: {fileID: 0}
 --- !u!61 &1810721507
@@ -7598,7 +7598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Teal Weird Beaker
   sprite: {fileID: 0}
 --- !u!212 &1905584160
@@ -7749,7 +7749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: 'Yellow Test tube '
   sprite: {fileID: 0}
 --- !u!212 &1962049275
@@ -7908,7 +7908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Purple Cylindrical Flask
   sprite: {fileID: 0}
 --- !u!212 &1997834296
@@ -8108,10 +8108,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 'Score: 0'
 --- !u!222 &2006054312
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8192,7 +8192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacter: {fileID: 1646337073}
-  minDistance: 1
+  minDistance: 1.1
   itemName: Brown Rounded Beaker
   sprite: {fileID: 0}
 --- !u!212 &2023122978
@@ -8320,7 +8320,7 @@ PrefabInstance:
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
       propertyPath: minDistance
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -735897550404495765, guid: b483002ca43914befaadea13ed82bf17,
         type: 3}
