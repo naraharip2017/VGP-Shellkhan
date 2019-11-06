@@ -158,7 +158,7 @@ public class CounterInteration : MonoBehaviour
         backpackController.ClearBackpack();
         recipeController.ClearBackpack();
 
-        GameController.instance.createNewRecipe(2);
+        GameController.instance.createNewRecipe(4);
 
         doneCooking = false;
 

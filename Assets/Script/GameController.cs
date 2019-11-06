@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
     {
         if (!recipeCreated)
         {
-            createNewRecipe(2);
+            createNewRecipe(4);
             recipeCreated = true;
         }
 
