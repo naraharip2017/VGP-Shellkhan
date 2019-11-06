@@ -55,8 +55,15 @@ public class BackpackController : MonoBehaviour
         }
     }
 
+   public void DeleteLastElement()
+   {
+       if (counter > 0)
+       {
+           items[counter - 1] = null;
+           slots[counter - 1].clearItem();
+           counter--;
+       }
 
-
-
+   }
 
 }
