@@ -10,7 +10,6 @@ public class GameController : MonoBehaviour
     public GameObject[] ingredients;
     public GameObject recipes;
     public bool recipeCreated = false;
-    public int score;
 
     private void Awake()
     {
@@ -29,7 +28,7 @@ public class GameController : MonoBehaviour
     {
         if (!recipeCreated)
         {
-            createNewRecipe(4);
+            createNewRecipe(2);
             recipeCreated = true;
         }
 
