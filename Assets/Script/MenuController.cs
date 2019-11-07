@@ -12,7 +12,7 @@ public class MenuController : MonoBehaviour
     public GameObject mainMenu;
     public GameObject instructions;
 
-    void Awake() 
+    void Awake()
     {
         instance = this;
         startup();
