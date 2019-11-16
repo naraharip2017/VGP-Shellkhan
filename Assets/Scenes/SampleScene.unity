@@ -2969,7 +2969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uitext: {fileID: 2090638383}
-  timerInterval: 60
+  timerInterval: 10
   timer: 0
   gameOver: {fileID: 840982966}
 --- !u!4 &456343291
