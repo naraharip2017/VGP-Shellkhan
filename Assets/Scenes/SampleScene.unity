@@ -7101,7 +7101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5ca1e07efa5491887772566de04c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 0.05
+  walkSpeed: 0.1
   backpack: {fileID: 584175121}
 --- !u!212 &1646337075
 SpriteRenderer:

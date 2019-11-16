@@ -26,6 +26,7 @@ public class CounterInteration : MonoBehaviour
     private bool doOnce = false;
     public static bool round = true;
     bool startTimer = false;
+    private bool pickedUpItem; //true if there's no item on the stove; 
 
 
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class CounterInteration : MonoBehaviour
         spriteRenderer = GetComponentsInChildren<SpriteRenderer>()[1];
         timer = timerInterval;
         uitext.text = "";
+        pickedUpItem = true;
 
     }
 
@@ -45,10 +47,11 @@ public class CounterInteration : MonoBehaviour
         {
             if (Vector3.Distance(mainCharacter.transform.position, transform.position) < minDistance)
             {
-                if (doneCooking == false )
+                if (doneCooking == false && pickedUpItem)
                 {
                     pressed = false; // Resetting pressed
                     beginCooking();
+
                     
 
                 }
@@ -73,18 +76,23 @@ public class CounterInteration : MonoBehaviour
                 round = false;
                 spriteRenderer.sprite = finishedCooking;
                 doneCooking = true;
+                startTimer = false;
+                
+                
 
             }
             
         }
 
-
-        if (doneCooking && Vector3.Distance(mainCharacter.transform.position, transform.position) < minDistance && pressed && mainCharacter != null)
+        if (pickedUpItem==false && doneCooking && Vector3.Distance(mainCharacter.transform.position,
+            transform.position) < minDistance && pressed && mainCharacter != null)
         {
 
             doneCooking = false;
             GameController.instance.score += 10;
             spriteRenderer.sprite = null;
+            
+            ResetBtn();
         }
 
 
@@ -97,6 +105,8 @@ public class CounterInteration : MonoBehaviour
         timer = timerInterval;
         canCount = true;
         doOnce = false;
+        pickedUpItem = true;
+        
     }
 
 
@@ -111,7 +121,7 @@ public class CounterInteration : MonoBehaviour
     public void beginCooking()
     {
 
-
+     
         BackpackController backpackController = backpack.GetComponent<BackpackController>();
         BackpackController recipeController = GameController.instance.recipes.GetComponent<BackpackController>();
 
@@ -152,16 +162,16 @@ public class CounterInteration : MonoBehaviour
 
         spriteRenderer.sprite = potSprite;
 
-
+        pickedUpItem = false;
         startTimer = true;
-
         backpackController.ClearBackpack();
         recipeController.ClearBackpack();
 
         GameController.instance.createNewRecipe(4);
 
-        doneCooking = false;
-
+        //doneCooking = false;
+   
+        
 
 
     }
