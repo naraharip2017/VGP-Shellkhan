@@ -15,14 +15,22 @@ public class GameTimer : MonoBehaviour
 
     public static bool round = false;
     public static bool startGame = false;
+    public static bool timeZero = false;
+    private int successScore;
+    public Image gameOver;
+
 
     void Start()
     {
         timer = timerInterval;
+        successScore = 30;
+        gameOver.enabled = false;
     }
 
     void Update()
     {
+        
+        MonoBehaviour.print( timeZero); 
         if (startGame)
         {
             if (timer >= 0.0f && canCount)
@@ -38,6 +46,9 @@ public class GameTimer : MonoBehaviour
                 uitext.text = "0.00";
                 timer = 0.0f;
                 round = false;
+                timeZero = true;
+                if (GameController.endscore<successScore) { gameOver.enabled = true; }
+
                 //endRound();
             }
 

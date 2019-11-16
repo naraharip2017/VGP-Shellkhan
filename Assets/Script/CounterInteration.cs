@@ -14,6 +14,7 @@ public class CounterInteration : MonoBehaviour
     public Sprite potSprite;
     public Sprite finishedCooking;
     public Text scoreUI;
+   
 
     public SpriteRenderer spriteRenderer;
 
