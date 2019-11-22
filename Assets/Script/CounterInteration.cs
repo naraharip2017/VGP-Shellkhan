@@ -127,7 +127,7 @@ public class CounterInteration : MonoBehaviour
         GameItemController[] recipeItems = recipeController.items;
 
 
-        if (recipeItems.Length != backPackItems.Length)
+        if (getItemsLength(recipeItems) != getItemsLength(backPackItems))
         {
             return;
         }
@@ -147,6 +147,7 @@ public class CounterInteration : MonoBehaviour
                     return;
                 }
             }
+
 
             if (hasItem == false)
             {
@@ -173,4 +174,22 @@ public class CounterInteration : MonoBehaviour
 
 
     }
+
+
+
+    public int getItemsLength(GameItemController[] item)
+    {
+        int counter = 0;
+
+        while(item[counter] != null)
+        {
+            ++counter;
+        }
+
+        return counter;
+
+    }
+
+
+
 }
