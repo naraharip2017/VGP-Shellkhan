@@ -52,9 +52,6 @@ public class CounterInteration : MonoBehaviour
                 {
                     pressed = false; // Resetting pressed
                     beginCooking();
-
-                    
-
                 }
             }
 

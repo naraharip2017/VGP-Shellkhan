@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject instructions;
+    public GameObject nextRound;
 
     void Awake()
     {
@@ -28,10 +29,11 @@ public class MenuController : MonoBehaviour
         
     }
 
-    void switchMenu(GameObject someMenu)
+    public void switchMenu(GameObject someMenu)
     {
         mainMenu.SetActive(false);
         instructions.SetActive(false);
+        nextRound.SetActive(false);
         someMenu.SetActive(true);
     }
 
@@ -43,6 +45,12 @@ public class MenuController : MonoBehaviour
     public void showInstructions()
     {
         switchMenu(instructions);
+    }
+
+    public void showNextRound()
+    {
+        gameObject.SetActive(true);
+        switchMenu(nextRound);
     }
 
     public void startup()
@@ -57,4 +65,10 @@ public class MenuController : MonoBehaviour
         GameTimer.startGame = true;
         
     }
+
+    public void startNextRound()
+    {
+        gameObject.SetActive(false);
+    }
+
 }
