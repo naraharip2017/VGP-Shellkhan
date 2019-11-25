@@ -16,14 +16,14 @@ public class GameTimer : MonoBehaviour
     public static bool round = false;
     public static bool startGame = false;
     private int successScore;
-    public Image gameOver;
+
 
 
     void Start()
     {
         timer = timerInterval;
         successScore = 30;
-        gameOver.enabled = false;
+        
     }
 
     void Update()
@@ -46,7 +46,7 @@ public class GameTimer : MonoBehaviour
                 round = false;
                 if (GameController.endscore<successScore)
                 {
-                  //gameOver.enabled = true;
+                 
                 }
                 MenuController.instance.showNextRound();
             }
