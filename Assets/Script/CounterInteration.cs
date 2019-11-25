@@ -158,7 +158,7 @@ public class CounterInteration : MonoBehaviour
 
 
 
-
+        SoundManager.instance.PlayPickUp();
         spriteRenderer.sprite = potSprite;
 
         pickedUpItem = false;

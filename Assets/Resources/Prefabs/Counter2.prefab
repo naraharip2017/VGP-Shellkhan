@@ -90,6 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3513776722268144156}
   - component: {fileID: 3484651542823341386}
+  - component: {fileID: 2027943169602557099}
   - component: {fileID: 4292877415774672120}
   - component: {fileID: -735897550404495765}
   m_Layer: 0
@@ -164,6 +165,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2027943169602557099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368919166950344820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c930ee47de8714c75ad81ac27fcf200c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUp: {fileID: 0}
 --- !u!61 &4292877415774672120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207,6 +221,7 @@ MonoBehaviour:
   backpack: {fileID: 0}
   potSprite: {fileID: 0}
   finishedCooking: {fileID: 0}
+  scoreUI: {fileID: 0}
   spriteRenderer: {fileID: 0}
   uitext: {fileID: 0}
   timerInterval: 5
