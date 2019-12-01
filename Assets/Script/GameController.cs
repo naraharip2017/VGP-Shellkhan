@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public bool recipeCreated = false;
     public int score;
     public static int endscore;
+    public int numItemsInRecipe;
  
 
     private void Awake()
@@ -34,7 +35,7 @@ public class GameController : MonoBehaviour
 
             if (!recipeCreated)
             {
-                createNewRecipe(4);
+                createNewRecipe(numItemsInRecipe);
                 recipeCreated = true;
             }
 
