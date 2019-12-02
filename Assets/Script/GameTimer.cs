@@ -22,7 +22,7 @@ public class GameTimer : MonoBehaviour
     void Start()
     {
         timer = timerInterval;
-        successScore = 10;
+        successScore = 30;
         
     }
 
