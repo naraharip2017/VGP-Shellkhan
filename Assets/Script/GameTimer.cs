@@ -17,12 +17,12 @@ public class GameTimer : MonoBehaviour
     public static bool startGame = false;
     private int successScore;
 
-
+    private bool beenHere = false;
 
     void Start()
     {
         timer = timerInterval;
-        successScore = 30;
+        successScore = 10;
         
     }
 
@@ -32,23 +32,34 @@ public class GameTimer : MonoBehaviour
         if (startGame)
         {
             
-            if (timer >= 0.0f && canCount)
+            if (timer > 0.0f && canCount)
             {
+                beenHere = true;
                 timer -= Time.deltaTime;
                 uitext.text = timer.ToString("F");
                 round = true;
+                if(GameController.endscore >= successScore)
+                {
+                    round = false;
+                    timer = 0.0f;
+                }
             }
             else if (timer <= 0.0f && !doOnce)
             {
+                print("in timer");
                 canCount = false;
                 doOnce = true;
                 uitext.text = "0.00";
                 round = false;
-                if (GameController.endscore<successScore)
+                if (GameController.endscore<successScore && beenHere)
                 {
-                 
+                    MenuController.instance.showEndScreen();
                 }
-                MenuController.instance.showNextRound();
+                else if(GameController.endscore >= successScore && beenHere)
+                {
+                    MenuController.instance.showNextRound();
+                    GameController.instance.score = 0;
+                }
             }
             
 
@@ -61,9 +72,9 @@ public class GameTimer : MonoBehaviour
     {
         timer = timerInterval;
         MenuController.instance.startNextRound();
-        print("here");
         canCount = true;
         doOnce = false;
+        beenHere = false;
     }
 
 

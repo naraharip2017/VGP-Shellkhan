@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
     public GameObject[] ingredients;
     public GameObject recipes;
-    public bool recipeCreated = false;
+    public bool recipeCreated = true;
     public int score;
     public static int endscore;
     public int numItemsInRecipe;
@@ -33,11 +33,7 @@ public class GameController : MonoBehaviour
     {
         endscore = score;
 
-            if (!recipeCreated)
-            {
-                createNewRecipe(numItemsInRecipe);
-                recipeCreated = true;
-            }
+         
 
             
 
@@ -53,7 +49,7 @@ public class GameController : MonoBehaviour
 
         System.Random rnd = new System.Random();
 
-
+        recipes.GetComponent<BackpackController>().ClearBackpack();
         for (int i = 0; i < numItems; ++i)
         {
             int index = rnd.Next(0, ingredients.Length);
